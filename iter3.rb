@@ -13,10 +13,10 @@ ventas = {
     Diciembre: 21000
     }
 
-def filtro(hash)
-    cond= ARGV[0].to_i
-    new_hash = hash.select{|mes, valor| valor>cond}
+def filter(hash)
+    n= ARGV[0].to_i
+    new_hash = hash.select{|mes, valor| valor>n}
     return new_hash
 end
 
-filtro(ventas)
+pp filter(ventas)
